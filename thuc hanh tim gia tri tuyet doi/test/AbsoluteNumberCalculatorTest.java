@@ -32,7 +32,7 @@ class AbsoluteNumberCalculatorTest {
     }
 
     public static void main(String[] args) {
-        
+
     }
 
 
