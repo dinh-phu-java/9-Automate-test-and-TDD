@@ -9,13 +9,12 @@ public class NexDayCalculator {
 
     public static String getNextDay(int myYear,int myMonth,int myDay){
 
-        LocalDateTime myLocalTime= LocalDateTime.of(myYear,myMonth,myDay,0,0,0);
-        LocalDateTime nextLocalTime= myLocalTime.plusDays(1);
+        LocalDateTime myLocalDate = LocalDateTime.of(myYear,myMonth,myDay,0,0,0);
+        LocalDateTime nextLocalTime= myLocalDate.plusDays(1);
         Calendar myCld= Calendar.getInstance();
         myCld.set(nextLocalTime.getYear(),nextLocalTime.getMonthValue()-1,nextLocalTime.getDayOfMonth());
-        SimpleDateFormat simpleFormat= new SimpleDateFormat("YYYY-MM-dd");
-        String myDateString=simpleFormat.format(myCld.getTime());
-        return myDateString;
+        SimpleDateFormat fmDate= new SimpleDateFormat("YYYY-MM-dd");
+        return fmDate.format(myCld.getTime());
 //
 //        LocalDateTime myLocalTime= LocalDateTime.of(myYear,myMonth,myDay,0,0,0);
 //        LocalDateTime nextLocalTime= myLocalTime.plusDays(1);
